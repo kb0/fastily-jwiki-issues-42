@@ -2,13 +2,13 @@ version: '3'
 
 services:
   mediawiki:
-    image: "mediawiki:1.31"
+    build:
+      context: .
     ports:
       - 8080:80
     links:
       - database
     volumes:
-      - ./extensions/PageForms:/var/www/html/extensions/PageForms
       - ./LocalSettings.php:/var/www/html/LocalSettings.php
 
   database:
