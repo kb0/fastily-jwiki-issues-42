@@ -23,7 +23,13 @@ tasks.withType<KotlinCompile> {
 }
 
 dependencies {
-    implementation("io.github.fastily:jwiki:1.10.0")
+    // implementation("io.github.fastily:jwiki:1.10.0")
+
+    implementation("io.github.fastily:jwiki") {
+        version {
+            branch = "master"
+        }
+    }
 }
 
 tasks.withType<Test> {

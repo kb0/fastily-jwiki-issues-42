@@ -1,2 +1,7 @@
 rootProject.name = 'fastily-jwiki-issues-42'
 
+sourceControl {
+    gitRepository("https://github.com/fastily/jwiki.git") {
+        producesModule("io.github.fastily:jwiki")
+    }
+}
